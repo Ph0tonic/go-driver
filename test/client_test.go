@@ -164,7 +164,7 @@ func createConnectionFromEnv(t testEnv) driver.Connection {
 	if disallowUnknownFields == "true" {
 		return createConnection(t, true)
 	}
-	return createConnection(t, false)
+	return createConnection(t, true)
 }
 
 // createConnection initializes a Connection from information specified in environment variables.
@@ -225,7 +225,7 @@ func createClientFromEnv(t testEnv, waitUntilReady bool) driver.Client {
 	if disallowUnknownFields == "true" {
 		return createClient(t, waitUntilReady, true)
 	}
-	return createClient(t, waitUntilReady, false)
+	return createClient(t, waitUntilReady, true)
 }
 
 // createClient initializes a Client from information specified in environment variables.
